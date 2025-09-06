@@ -7,7 +7,7 @@ const {BooksRead , BookReadById , BooksCreate , BooksUpdate , BooksDelete} = req
 
 router.get("/" ,BooksRead);
 
-router.get("/" , BookReadById);
+router.get("/:id" , BookReadById);
 
 router.post("/",BooksCreate);
 

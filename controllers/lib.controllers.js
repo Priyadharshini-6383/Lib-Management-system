@@ -13,7 +13,16 @@ try {
 };
  const BookReadById = async (req,res) => {
     try {
+const book = await Library.findById(req.params.id);
+if (book == null) {
+    res.status(404) .json({message : "There is no book found for this id"});
 
+} else {
+    res.status(200).json(book);
+}
+    }
+    catch (error) {
+        res.status(500).json({message : "Error found"});
     }
  };
 
