@@ -2,9 +2,13 @@ const Library = require("../models/lib.models.js");
 
 
 
-const BooksRead = (req , res) => {
-res.send("Books fetched Successfully");
-    
+const BooksRead = async (req , res) => {
+try {
+    const book = await Library.find();
+    res.json(book);
+} catch (error) {
+    res.status(500).json({message : "Book not found"});
+}
 
 };
 
