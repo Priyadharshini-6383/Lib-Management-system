@@ -18,3 +18,4 @@ catch (error) {
 }
 
 };
+module.exports = connectdB;
