@@ -1,3 +1,7 @@
 //To ignore node modules
 
 node_modules;
+
+// To ignore env file
+
+.env;
