@@ -1,0 +1,3 @@
+//To ignore node modules
+
+node_modules;
