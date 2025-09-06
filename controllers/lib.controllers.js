@@ -13,3 +13,5 @@ res.send("Books updated successfully");
 const BooksDelete = (req , res) => {
 res.send("Books deleted successfully");
 };
+
+module.exports = {BooksRead , BooksCreate , BooksUpdate , BooksDelete};
