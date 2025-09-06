@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const {BooksRead , BooksCreate , BooksUpdate , BooksDelete} = require("../controllers/library.controllers.js");
+const {BooksRead , BooksCreate , BooksUpdate , BooksDelete} = require("../controllers/lib.controllers.js");
 
 
 router.get("/" ,BooksRead);
