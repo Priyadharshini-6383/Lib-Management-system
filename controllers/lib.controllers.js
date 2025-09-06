@@ -1,9 +1,13 @@
 const BooksRead = (req , res) => {
-res.send("Books read Successfully");
+res.send("Books updated successfully");
+    
+
 };
 
 const BooksCreate = (req , res ) => {
-res.send("Books created successfully");
+ console.log(req.body);
+
+    return res.json(req.body);
 };
 
 const BooksUpdate = (req , res) =>{

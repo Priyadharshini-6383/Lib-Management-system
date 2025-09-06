@@ -6,6 +6,10 @@ const Accessrouter = require("./routes/lib.router.js");
 
 app.use("/library" , Accessrouter);
 
+app.use(express.json());
+
+app.use(express.urlencoded({extended : true}));
+
 const connectdB = require("./Database/DB.js");
 connectdB();
 
