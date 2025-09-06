@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 
+const Accessrouter = require("./routes/lib.routes.js");
+app.use("/library" , Accessrouter);
+
 app.get("/" , (req , res ) => {
 res.send(" Welcome to Library Management System");
 });
