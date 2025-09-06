@@ -3,12 +3,14 @@ const app = express();
 const PORT = 5000;
 
 const Accessrouter = require("./routes/lib.router.js");
+
 const connectdB = require("./Database/DB.js");
+connectdB();
 
 app.use(express.json());
 
 app.use(express.urlencoded({extended : true}));
-connectdB();
+
 
 app.use("/library" , Accessrouter);
 
