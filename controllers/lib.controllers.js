@@ -43,8 +43,27 @@ catch (error) {
 }
 };
 
-const BooksUpdate = (req , res) =>{
-res.send("Books updated successfully");
+const BooksUpdate = async (req , res) =>{
+const updateresult = await Library.findOneAndUpdate(
+    {
+        _id : req.params.id
+    },
+    {
+    Booktitle : req.body.Booktitle,
+    Author : req.body.Author,
+    PublishedYear : req.body.PublishedYear,
+    description : req.body.description,
+    },
+    {
+        new : true
+    }
+);
+
+try {
+    res.status(200) . json(updateresult);
+} catch (error) {
+    res.status(500).json({message : "Error found"});
+}
 };
 
 const BooksDelete = (req , res) => {
