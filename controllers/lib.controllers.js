@@ -66,8 +66,19 @@ try {
 }
 };
 
-const BooksDelete = (req , res) => {
-res.send("Books deleted successfully");
+const BooksDelete = async (req , res) => {
+  const Bookid = req.params.id;
+
+  const Bookfound = Library.findOne({_id : Bookid});
+
+  try {
+ await Library. deleteOne({_id : Bookid });
+
+ res.json({message : "Book deleted"});
+
+  } catch (error) {
+res.status(500).json({message : "Error found"});
+  }
 };
 
 module.exports = {BooksRead , BookReadById ,BooksCreate , BooksUpdate , BooksDelete};
