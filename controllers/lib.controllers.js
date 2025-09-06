@@ -11,6 +11,11 @@ try {
 }
 
 };
+ const BookReadById = async (req,res) => {
+    try {
+
+    }
+ };
 
 const BooksCreate = async (req , res ) => {
 const Books = new Library ({
@@ -37,4 +42,4 @@ const BooksDelete = (req , res) => {
 res.send("Books deleted successfully");
 };
 
-module.exports = {BooksRead , BooksCreate , BooksUpdate , BooksDelete};
+module.exports = {BooksRead , BookReadById ,BooksCreate , BooksUpdate , BooksDelete};

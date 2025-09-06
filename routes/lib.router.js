@@ -2,10 +2,12 @@ const express = require("express");
 
 const router = express.Router();
 
-const {BooksRead , BooksCreate , BooksUpdate , BooksDelete} = require("../controllers/lib.controllers.js");
+const {BooksRead , BookReadById , BooksCreate , BooksUpdate , BooksDelete} = require("../controllers/lib.controllers.js");
 
 
 router.get("/" ,BooksRead);
+
+router.get("/" , BookReadById);
 
 router.post("/",BooksCreate);
 
