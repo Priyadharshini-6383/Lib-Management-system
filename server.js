@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 
-const Accessrouter = require("./routes/lib.routes.js");
+const Accessrouter = require("./routes/lib.router.js");
 app.use("/library" , Accessrouter);
 
 app.get("/" , (req , res ) => {
